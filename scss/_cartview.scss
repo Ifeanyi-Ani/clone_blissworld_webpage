@@ -1,0 +1,148 @@
+.main-container {
+    width:100%;
+    height:auto;
+    padding-bottom: 30px;
+    background-color:#fff;
+
+    & .top-container{
+        position: relative;
+        width:100%;
+        height:120px;
+
+        & .first-div{
+            height: 90px;
+            background: url("../img/cartview/blue-dots.webp");
+            background-position: center;
+        }
+
+        & .second-div{
+            height: 80px;
+            width:80%;
+            position: absolute;
+            left:50%;
+            transform:translate(-50%,-50%);
+            background-color: #e3f6fa;
+            display:flex;
+            justify-content: center;
+            align-items:flex-end;
+            padding-bottom:10px;
+
+            & h1{
+                font-size: 45px;
+            }
+        }
+
+    }
+
+    & .main-content{
+        display:flex;
+        justify-content: space-evenly;
+        margin-top:80px;
+
+        & .table-container{
+            width:65%;
+
+            & tr td {
+                border-top: 1px solid gainsboro;
+                padding: 20px 30px;
+            }
+            
+            & tr .img-col div{
+                width:150px;
+                height:100px;
+
+                & img{
+                    width: 100%;
+                    height:100%;
+                }
+            }
+            & tr .details h3{
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+            & tr .details p{
+                font-size:18px;
+                line-height: 25px;
+            }
+
+            & tr .quantity .box {
+                width:70%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid black;
+                height:30px;
+                padding:2px 6px;
+
+                & button, & input {
+                    width:40%;
+                    height: 98%;
+                    outline:none;
+                    border:none;
+                    background-color: #fff;
+                }
+                & button{
+                    cursor:pointer;
+            
+                    &:hover{
+                        background-color: #537076;
+                    }
+        
+                    &:active{
+                        transform:translate(1px);
+                        border:1px solid red;
+                    }
+                }
+            }
+
+            & tr .amount{
+                font-weight:800;
+            }
+
+            & tr .delete a{
+                color:#000;
+                font-size: 18px;
+
+                &:hover{
+                    color:#777777;
+                }
+            }
+        }
+        & .aside{
+            width:30%;
+
+            & ul {
+                width:90%;
+                border:1px solid black;
+                list-style-type: none;
+                padding:30px 20px 5px 20px;
+                margin:auto;
+
+                & li{
+                    display:flex;
+                    justify-content: space-between;
+                    font-size: 20px;
+                    line-height:40px;
+
+                    & a{
+                        color:black;
+                        font-size: 20px;
+                    }
+
+                    & .txt-right{
+                        margin-left:auto;
+
+                        & a img{
+                            width:150px;
+                            height:50px;
+                            border-radius: 50px;
+                        }
+                        & a .fa{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
