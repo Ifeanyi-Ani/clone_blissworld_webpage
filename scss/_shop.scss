@@ -13,12 +13,12 @@
         color:#fff;
 
         & h1{
-            font-size:40px;
+            font-size:30px;
             margin-bottom:20px;
         }
 
         & p{
-            font-size:20px;
+            font-size:16px;
         }
 
     }
@@ -52,12 +52,12 @@
         margin-bottom: 20px;
   
         & h2{
-          font-size:35px;
+          font-size:25px;
           margin-bottom: 10px;
           line-height: 30px;
         }
         & p{
-          font-size: 20px;
+          font-size: 16px;
           color:rgba(black,.6);
         }
       }
@@ -69,7 +69,7 @@
   
         & .item{
             grid-auto-rows: auto;
-          width:400px;
+          width:320px;
           padding:20px 8px;
           background-color:#fff;
           position: relative;
@@ -78,7 +78,7 @@
   
           & .item-img-container{
             width: 100%;
-            height:500px;
+            height:300px;
             position:relative;
             text-align: center;
          

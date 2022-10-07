@@ -1,0 +1,58 @@
+.product-viem-container{
+    background-color:  #f4f9fb;
+    height: 900px;
+
+& .inner{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height:800px;
+    gap:20px;
+    background-color:#fff;
+
+    & .img-col{
+        width:50%;
+        height: 70%;
+        padding:30px 20px;
+        background: linear-gradient(to right,#f3daeb,#f3daeb,#fefbfd);
+        & .container{
+            width:70%;
+            height:90%;
+            position:relative;
+            margin:auto;
+
+            & .bg-img{
+                width:95%;
+                height:100%;
+                margin-left: auto;
+
+                & img{
+                    width:100%;
+                    height:100%;
+                }
+            }
+
+            & .changing-img{
+                display:flex;
+                flex-direction: column;
+                gap:10px;
+                position:absolute;
+                top:50%;
+                transform: translate(-50%,-50%);
+
+                & div {
+                    width:50px;
+                    height:50px;
+
+                    & img{
+                        width:97%;
+                        height: 97%;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+}

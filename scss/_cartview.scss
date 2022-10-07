@@ -28,7 +28,7 @@
             padding-bottom:10px;
 
             & h1{
-                font-size: 45px;
+                font-size: 25px;
             }
         }
 
@@ -42,6 +42,10 @@
         & .table-container{
             width:65%;
 
+            & table {
+                border-collapse: collapse;
+                border-bottom: 1px solid gainsboro;
+            }
             & tr td {
                 border-top: 1px solid gainsboro;
                 padding: 20px 30px;
@@ -57,12 +61,11 @@
                 }
             }
             & tr .details h3{
-                font-size: 22px;
+                font-size: 18px;
                 margin-bottom: 10px;
             }
             & tr .details p{
-                font-size:18px;
-                line-height: 25px;
+                font-size:13px;
             }
 
             & tr .quantity .box {
@@ -101,7 +104,7 @@
 
             & tr .delete a{
                 color:#000;
-                font-size: 18px;
+                font-size: 13px;
 
                 &:hover{
                     color:#777777;
@@ -121,12 +124,13 @@
                 & li{
                     display:flex;
                     justify-content: space-between;
-                    font-size: 20px;
-                    line-height:40px;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                   
 
                     & a{
                         color:black;
-                        font-size: 20px;
+                        font-size: 16px;
                     }
 
                     & .txt-right{

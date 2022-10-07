@@ -1,6 +1,6 @@
 .main-slider {
   width: 100%;
-  padding: 40px;
+  padding: 30px;
   background-color: $text-primary;
 }
 
@@ -13,7 +13,7 @@
 
   & .img-container {
     width: 45%;
-    height: 550px;
+    height: 400px;
     & img {
       width: 100%;
       height: 100%;
@@ -34,11 +34,11 @@
     margin-left: 30px;
 
     & h2 {
-      font-size: $fontsize5;
+      font-size: $fontsize4;
       color: rgba(black, 0.8);
     }
     & p {
-      font-size: 22px;
+      font-size: 16px;
       line-height: 35px;
       font-weight: 200;
       color: rgba(black, 0.7);
@@ -90,11 +90,11 @@
   margin-left: 30px;
 
   & h2{
-    font-size: $fontsize5;
+    font-size: $fontsize4;
       color: #fff;
   }
   & p{
-    font-size: 22px;
+    font-size: 16px;
     line-height: 35px;
     font-weight: 200;
     color: rgba(black, 0.7);
@@ -147,11 +147,11 @@
     margin-left: 30px;
 
     & h2 {
-      font-size: $fontsize5;
+      font-size: $fontsize4;
       color: #fff;
     }
     & p {
-      font-size: 22px;
+      font-size: 16px;
       line-height: 35px;
       font-weight: 200;
       color: rgba(black, 0.7);
@@ -205,12 +205,12 @@
       margin-bottom: 20px;
 
       & h2{
-        font-size:35px;
+        font-size:25px;
         margin-bottom: 10px;
         line-height: 30px;
       }
       & p{
-        font-size: 20px;
+        font-size: 18px;
         color:rgba(black,.6);
       }
     }
@@ -239,7 +239,8 @@
           & .view{
             position:absolute;
             bottom:5px;
-            left:25%;
+            left:50%;
+            transform:translate(-50%,-50%);
             width:150px;
             height:40px;
 
@@ -273,7 +274,7 @@
 
           & h3 a{
             text-decoration:none;
-            font-size: 22px;
+            font-size: 20px;
             font-weight:800;
             color:#4e4e4e;
           }
@@ -336,11 +337,11 @@
     justify-content:space-around;
     align-items:center;
     padding:10px 0;
-    border-top:2px solid;
-    border-bottom:2px solid;
+    border-top:1px solid gainsboro;
+    border-bottom:1px solid gainsboro;
 
     & .col h3{
-      font-size:22px;
+      font-size:18px;
     }
     & .col{
       display:flex;
@@ -382,11 +383,11 @@
       padding:20px 100px;
 
       & h4{
-        font-size:28px;
+        font-size:22px;
         font-weight: 600;
       }
       & p{
-        font-size: 20px;
+        font-size: 16px;
         line-height:25px;
         margin-bottom:25px;
       }
@@ -447,13 +448,12 @@
     }
 
     & h3{
-      font-size:50px;
+      font-size:30px;
       font-weight: 500;
-      line-height: 50px;
       margin-bottom: 5px;
     }
     & p{
-      font-size:22px;
+      font-size:16px;
       margin-bottom:25px;
     }
     & button{
@@ -519,7 +519,7 @@
       margin-bottom: 20px;
 
       & h2{
-        font-size:35px;
+        font-size:25px;
         margin-bottom: 10px;
         line-height: 30px;
       }
@@ -557,7 +557,7 @@
 
           & h3 a{
             text-decoration:none;
-            font-size: 22px;
+            font-size: 20px;
             font-weight:800;
             color:#4e4e4e;
           }
