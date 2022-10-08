@@ -1,0 +1,123 @@
+@media (max-width:1024px) {
+.page-container header .nav {
+    width:90%;
+}
+.page-container header .nav .main-nav  {
+        width:100%;
+    }
+}
+@media (max-width:876px) {
+.page-container header .nav {
+    width:100%;
+}
+.page-container header{
+    height: auto;
+}
+.page-container header .nav .main-nav  {
+        width:100%;
+        font-size: 10px;
+    }
+    header .nav .main-nav li a{
+        font-size: 10px;
+    }
+}
+@media (max-width:768px) {
+.tablet-mobile-view{
+        display: none !important;
+     }
+.page-container header .nav {
+    width:100%;
+}
+.page-container header .nav {
+   
+    // display: none;
+   
+  & .main-nav {
+    position: absolute;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0px;
+    left:0;
+    width:100%;
+    min-height: 50vh;
+    background-color: #e3f6fa;
+    flex-direction: column !important;
+    margin: unset;
+    padding:unset;
+    border-bottom: 1px solid #fff;
+    
+    & .dropdown{
+        width:100%;
+        margin:unset;
+        padding: unset;
+        border-bottom: 1px solid #fff;
+
+        & a {
+            display:flex;
+            justify-content: space-between;
+            padding:15px;
+            font-size: 18px;
+        }
+        & .mega-menu{
+            padding:unset;
+            overflow: scroll;
+        }
+        & .mega-menu .sub-menu-container{
+            margin:unset;
+            padding:unset;
+
+            & .sub-col{
+                margin:unset;
+                flex-direction: column;
+                & div {
+                    width:100%;
+                    & h3 {
+                        width:100%;
+                        margin:unset;
+                        padding:unset;
+                        border-bottom: none;
+
+                        & a {
+                            display: block;
+                            width:100%;
+                            font-size: 16px;
+                            font-weight: 200;
+                           
+                        }
+                        & ul li{
+                            margin:unset;
+                            padding:unset;
+
+                            & {
+                                padding:unset
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+}
+.page-container header nav .left-col .hamburger{
+    display: block !important;
+    padding-top: 5px;
+    position:relative;
+    cursor: pointer;
+    
+
+    & .bar{
+        height: 5px;
+        width:30px;
+        background-color: white;
+        margin-top: 5px;
+    }
+    &:hover .nav{
+        display: block;
+    }
+}
+.page-container header nav .left-col .text,
+.page-container header nav .right-col .text{
+   display: none !important;
+}
+}
