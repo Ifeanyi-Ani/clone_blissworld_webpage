@@ -14,7 +14,7 @@
     <body>
         <div class="large-bubbles"></div>
         <div class="page-container">
-            <div class="shipping-info">
+            <div class="shipping-info" id="shippingInfo">
                 <div class="info"><p>FREE U.S GROUND SHIPPING + SAMPLES OVER
                         <span>$40!</span> </p></div>
                 <div class="btn-container"><button id="hide_div"><i class="fa
@@ -23,7 +23,7 @@
             <header>
                 <nav>
                     <div class="left-col">
-                        <div class="hamburger">
+                        <div class="hamburger" id="hamburger">
                             <div class="bar"></div>
                             <div class="bar"></div>
                             <div class="bar"></div>
@@ -63,7 +63,7 @@
                     </div>
                 </nav>
 
-                <div class="nav">
+                <div class="nav" id="nav">
                     <ul class="main-nav" id="mainNav">
                         <li class="dropdown"><a href="#" data-toggle='dropdown'>
                                 BEST SELLER <i class="fa
@@ -73,8 +73,8 @@
                                 <div class="sub-menu-container">
                                     <div class="sub-col">
                                         <div>
-                                            <h3><a href="#">By Category</a></h3>
-                                            <ul>
+                                            <h3 class="sub-dropdown"><a href="#" data-toggle="links">By Category</a></h3>
+                                            <ul class="pop-out">
                                                 <li><a href="#">Body & Hair Care</a></li>
                                                 <li><a href="#">SkinCare</a>
                                                 </li>
@@ -92,8 +92,8 @@
                                 <div class="sub-menu-container">
                                     <div class="sub-col">
                                         <div>
-                                            <h3><a href="#">By Category</a> </h3>
-                                            <ul>
+                                            <h3 class="sub-dropdown"><a href="#" data-toggle="links">By Category</a> </h3>
+                                            <ul class="pop-out">
                                                 <li><a href="#">Bestsellers</a></li>
                                                 <li><a href="#">Mini Bliss</a>
                                                 </li>
@@ -116,8 +116,8 @@
                                         </div>
 
                                         <div>
-                                            <h3><a href="#">By Concern</a> </h3>
-                                            <ul>
+                                            <h3 class="sub-dropdown"><a href="#" data-toggle="links">By Concern</a> </h3>
+                                            <ul class="pop-out">
                                                 
                                                 <li><a href="#">Acne & Blemishes</a></li>
                                                 <li><a href="#">Discoloration</a>
@@ -133,8 +133,8 @@
                                                 <li><a href="#">Dryness</a>
                                                 </li>
                                             </ul>
-                                            <h3><a href="#">Shop By Ingredient</a> </h3>
-                                            <ul>
+                                            <h3 class="sub-dropdown"><a href="#" data-toggle="links">Shop By Ingredient</a> </h3>
+                                            <ul class="pop-out">
                                                
                                                 <li><a href="#">Glycolie Acid</a></li>
                                                 <li><a href="#">Hyaluronic Acid</a>
@@ -235,9 +235,8 @@
                                 <div class="sub-menu-container">
                                     <div class="sub-col">
                                         <div>
-                                            <h3><a href="#">By Category</a></h3>
-                                            <ul>
-                                                
+                                            <h3 class="sub-dropdown"><a href="#" data-toggle="links">By Category</a></h3>
+                                            <ul class="pop-out">
                                                 <li><a href="#">Bestsellers</a></li>
                                                 <li><a href="#">Body Wash &
                                                         Scrubs</a> </li>
@@ -310,8 +309,8 @@
                                 <div class="sub-menu-container">
                                     <div class="sub-col">
                                         <div>
-                                            <h3><a href="#">By Category</a> </h3>
-                                            <ul>
+                                            <h3 class="sub-dropdown"><a href="#" data-toggle="">By Category</a> </h3>
+                                            <ul class="pop-out">
                                                 <li><a href="#">Body & Hair Care</a></li>
                                                 <li><a href="#">SkinCare</a>
                                                 </li>
@@ -424,8 +423,8 @@
                                 <div class="sub-menu-container">
                                     <div class="sub-col">
                                         <div>
-                                            <h3><a href="#">About Bliss</a> </h3>
-                                            <ul>
+                                            <h3 class="sub-dropdown"><a href="#" data-toggle="links">About Bliss</a> </h3>
+                                            <ul class="pop-out">
                                                 
                                                 <li><a href="#">About Us</a></li>
                                                 <li><a href="#">Find Us</a>
@@ -443,13 +442,15 @@
                                             </ul>
                                         </div>
                                         <div>
-                                            <ul>
-                                                <h3>About Bliss</h3>
+                                            <h3 class="sub-dropdown"><a href="#" data-toggle="links">About Bliss</a> </h3>
+                                            <ul class="pop-out">
+                                               
                                                 <li><a href="#">Ingredient
                                                         Glossary</a></li>
                                             </ul>
-                                            <ul>
-                                                <h3>Take a Quiz </h3>
+                                            <h3 class="sub-dropdown"><a href="#" data-toggle="links">Take a Quiz</a>  </h3>
+                                            <ul class="pop-out">
+                                               
                                                 <li><a href="#">Clear skin 101</a></li>
                                                 <li><a href="#">Ingredient quiz</a></li>
                                                 <li><a href="#">Find my routine</a></li>
@@ -514,10 +515,10 @@
                                 <h2>Rest Assured</h2>
                                 <p>This powerhouse eye cream visbly reduces dark
                                     circles
-                                    while <br>
+                                    while <br class="tablet-mobile-view">
                                     depuffing eyes for an always-well-rested
                                     look. <b>
-                                        93% of users saw <br>
+                                        93% of users saw <br class="tablet-mobile-view">
                                         visible improvement in dark circles in 4
                                         weeks
                                         of less!</b>
@@ -535,10 +536,10 @@
                                 <h2>Bright Idea <sup>TM</sup> </h2>
                                 <p>Powered by clinical grade vitamin C, this
                                     bestselling
-                                    trio boosts<br>
+                                    trio boosts<br class="tablet-mobile-view">
                                     brightness & reduces the look of dark spots
                                     and for
-                                    visibly <br>
+                                    visibly <br class="tablet-mobile-view">
                                     glowing results.
                                 </p>
                                 <button type="button" class="btn
@@ -553,9 +554,9 @@
                             <div class="content">
                                 <h2>Block Star <sup>TM</sup> </h2>
                                 <p>This 100% mineral daily sunscreen blends like
-                                    a dream and<br>
+                                    a dream and<br class="tablet-mobile-view">
                                     delivers broad spectrum protection, plus a
-                                    smooth, never-greasy<br>
+                                    smooth, never-greasy<br class="tablet-mobile-view">
                                     finish.
                                 </p>
                                 <button type="button" class="btn
@@ -693,7 +694,7 @@
             </div>
             <div class="home-container-2">
                 <div class="inner-container">
-                    <div class="col">
+                    <div class="col col-span">
                         <h3>Only on blissworld.com</h3>
                     </div>
                     <div class="col">
@@ -760,10 +761,10 @@
 
             <div class="home-container-4">
                 <div class="col">
-                    <h3>Clean, Cruelty-Free, <br/>Dermatologist-Tested</h3>
+                    <h3>Clean, Cruelty-Free, <br class="mobile-view"/>Dermatologist-Tested</h3>
                         <p>We are a clean, cruelty-free, planet-friendly
-                            skincare brand that <br> delivers transformative,
-                            dermatologist-tested products for total <br> skin
+                            skincare brand that <br class="mobile-view"> delivers transformative,
+                            dermatologist-tested products for total <br class="mobile-view"> skin
                             happiness. </p>
                         <button type="button">LEARN MORE</button>
                         <button type="button">SHOP BLISS</button>
@@ -771,7 +772,7 @@
                     <div class="col">
                         <img src="img/home/hp-about-mobile.webp" alt="">
                     </div>
-                    <div class="box1"></div>
+                    <div class="box1 mobile-view"></div>
                 </div>
 
                 <div class="home-container-5">
@@ -781,7 +782,7 @@
                             <p>Boosts Brightness & Elasticity In 1 Use With
                                 Clinical-Grade Vitamin C</p>
                         </div>
-                        <div class="product-sample-grid">
+                        <div class="product-sample-grid hide-home-container5-product">
 
                             <div class="item">
                                 <div class="item-img-container">
@@ -808,18 +809,18 @@
                             <div class="sub-col img-con">
                                 <img src="img/home/footer_bcorp.svg" alt="">
                             </div>
-                            <div class="sub-col">
+                            <div class="sub-col first">
+                                <h4>COMPANY</h4>
                                 <ul>
-                                    <h4>COMPANY</h4>
                                     <li><a href="#"> Who we are</a></li>
                                     <li><a href="#"> Find Bliss Next You</a></li>
                                     <li><a href="#"> Bliss Spa</a></li>
                                     <li><a href="#"> Shop</a></li>
                                 </ul>
                             </div>
-                            <div class="sub-col">
+                            <div class="sub-col second">
+                                <h4>CUSTOMER CARE</h4>
                                 <ul>
-                                    <h4>CUSTOMER CARE</h4>
                                     <li><a href="#"> Gift Cards </a></li>
                                     <li><a href="#"> Contact Us </a></li>
                                     <li><a href="#"> Shipping </a></li>
@@ -828,17 +829,19 @@
                                     <li><a href="#"> SMS Texts and Alerts </a></li>
                                 </ul>
                             </div>
-                            <div class="sub-col">
+                            <div class="sub-col third">
+                                <h4>THE DRY STUFF</h4>
                                 <ul>
-                                    <h4>THE DRY STUFF</h4>
+                                    
                                     <li><a href="#">Privacy Policy</a> </li>
                                     <li><a href="#">Terms & Conditions</a> </li>
                                     <li><a href="#">Accessibility Statement</a>
                                     </li>
                                     <li><a href="#">Sitemap</a> </li>
                                 </ul>
+                                 <h4 class="tablet-mobile-view">THE FUN STUFF</h4>
                                 <ul class="inline">
-                                    <h4>THE FUN STUFF</h4>
+                                    
                                     <div>
                                         <li><a href="#"><img
                                                     src="img/home/icon-instagram.svg"
@@ -871,12 +874,12 @@
                             accessibility enabled. It has all the same content
                             and features and has been updated to remove web
                             accessibility barriers. This is not a separate site.
-                            It is a <br>
+                            It is a <br class="tablet-mobile-view">
                             manual remediation of the original site, performed
                             by <a href="#">UsableNet</a> developers and tested
                             by users of assistive technology including screen
                             readers. This process ensures all users have equal
-                            access to all <br>
+                            access to all <br class="tablet-mobile-view">
                             content and features.</p>
                     </div>
                 </footer>

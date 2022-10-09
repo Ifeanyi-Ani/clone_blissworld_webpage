@@ -1,4 +1,26 @@
+let hamburger=document.getElementById("hamburger");
+let nav=document.getElementById("nav");
+let subDrop=document.querySelectorAll(".sub-dropdown");
+let popIn=document.querySelectorAll(".pop-out")
+let hideDiv=document.getElementById("hide_div");
+let shippingInfo=document.getElementById("shippingInfo");
 
+hideDiv.addEventListener("click", ()=>{
+  shippingInfo.style.display="none";
+})
+
+hamburger.addEventListener("click", ()=>{
+  nav.classList.toggle("nav-show")
+})
+
+for (let i=0;i<subDrop.length;i++){
+  subDrop[i].addEventListener("click",(e)=>{
+   popIn.forEach(pop=>{
+      pop.classList.toggle("nav-show");
+      console.log(pop);
+    })
+  })
+}
 // $(document).ready(function(){
 //   $("[data-toggle='dropdown']").click(function(e) {   
 //       $(this).parents(".dropdown").toggleClass("active");  /*when you click on an element with attr data-toggle='dropdown' it toggle the class "open" on its parent with class "dropdown"*/

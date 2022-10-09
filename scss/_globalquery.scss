@@ -25,12 +25,17 @@
 .tablet-mobile-view{
         display: none !important;
      }
+     .pop-out{
+        display: none !important;
+        margin:unset;
+        padding: unset;
+     }
+     
 .page-container header .nav {
     width:100%;
 }
 .page-container header .nav {
-   
-    // display: none;
+    display: none;
    
   & .main-nav {
     position: absolute;
@@ -65,10 +70,14 @@
         & .mega-menu .sub-menu-container{
             margin:unset;
             padding:unset;
+            min-height:fit-content !important;
 
             & .sub-col{
                 margin:unset;
+                padding-left: 15px;
                 flex-direction: column;
+                min-height:fit-content !important;
+                gap:0;
                 & div {
                     width:100%;
                     & h3 {
@@ -80,24 +89,21 @@
                         & a {
                             display: block;
                             width:100%;
+                            padding:15px;
                             font-size: 16px;
-                            font-weight: 200;
-                           
+                            font-weight: 200;  
+                            
                         }
-                        & ul li{
-                            margin:unset;
-                            padding:unset;
-
-                            & {
-                                padding:unset
-                            }
-                        }
+                        
                     }
                 }
             }
         }
     }
   }
+}
+.page-container header .nav .main-nav .dropdown .sub-col a{
+    padding:unset;
 }
 .page-container header nav .left-col .hamburger{
     display: block !important;
@@ -120,4 +126,10 @@
 .page-container header nav .right-col .text{
    display: none !important;
 }
+}
+.nav.nav-show {
+    display: block !important;
+}
+.pop-out.nav-show{
+    display: block !important;
 }
