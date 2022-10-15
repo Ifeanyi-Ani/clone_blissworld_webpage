@@ -508,116 +508,94 @@
                     <form action="">
                         <div class="col">
                             <label for="">Email Address</label>
-                            <input type="email">
-                            <label for="" class="error"></label>
+                            <input type="email" id="email">
+                            <label for="" class="error" id="emailError"></label>
                         </div>
                         <div class="col">
                             <label for="">Password</label>
-                            <input type="password">
-                            <label for="" class="error"></label>
+                            <input type="password" id="password">
+                            <label for="" class="error" id="passwordError"></label>
                         </div>
                         <div class="col">
                             <label for="">Confirm Password</label>
-                            <input type="password">
-                            <label for="" class="error"></label>
+                            <input type="password" id="passwordConfirm">
+                            <label for="" class="error" id="passwordConfirmError"></label>
                         </div>
                         <div class="col">
                             <label for="">Birth Month</label>
-                            <select name="" id="">
-                                <option value="">Birth Month</option>
-                                <option value="">January</option>
-                                <option value="">February</option>
-                                <option value="">March</option>
-                                <option value="">April</option>
-                                <option value="">May</option>
-                                <option value="">June</option>
-                                <option value="">July</option>
-                                <option value="">August</option>
-                                <option value="">September</option>
-                                <option value="">October</option>
-                                <option value="">Novenmber</option>
-                                <option value="">December</option>
+                            <select name="" id="birthMonth">
                             </select>
-                            <label for="" class="error"></label>
+                            <label for="" class="error" id="birthMonthError"></label>
                         </div>
                         <div class="col">
                             <label for="">Birth Day</label>
-                            <select name="" id="">
-                                <option value="">Birth Day</option>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                                <option value="">5</option>
-                                <option value="">6</option>
-                                <option value="">7</option>
-                                <option value="">8</option>
-                                <option value="">9</option>
-                                <option value="">10</option>
-                                <option value="">11</option>
-                                <option value="">12</option>
+                            <select name=""  id="birthDay">
                             </select>
-                            <label for="" class="error"></label>
+                            <label for="" class="error" id="birthDayError"></label>
                         </div>
                         <div class="col">
                             <label for="">First Name</label>
-                            <input type="text">
-                            <label for="" class="error"></label>
+                            <input type="text" id="firstName">
+                            <label for="" class="error" id="firstNameError"></label>
                         </div>
                         <div class="col">
                             <label for="">Last Name</label>
-                            <input type="text">
-                            <label for="" class="error"></label>
+                            <input type="text" id="lastName">
+                            <label for="" class="error" id="lastNameError"></label>
                         </div>
                         <div class="col">
                             <label for="">Address Line 1</label>
-                            <input type="text">
-                            <label for="" class="error"></label>
+                            <input type="text" id="address">
+                            <label for="" class="error" id="addressError"></label>
                         </div>
                         <div class="col">
                             <label for="">Address Line 2</label>
-                            <input type="text">
-                            <label for="" class="error"></label>
+                            <input type="text" id="address2">
+                            <label for="" class="error" id="address2Error"></label>
                         </div>
                         <div class="col">
                             <label for="">Company Name</label>
-                            <input type="text">
-                            <label for="" class="error"></label>
+                            <input type="text" id="companyName">
+                            <label for="" class="error" id="companyNameError"></label>
                         </div>
                         <div class="col">
                             <label for="">Zip/postcode</label>
-                            <input type="text">
-                            <label for="" class="error"></label>
+                            <input type="text" id="zipCode">
+                            <label for="" class="error" id="zipCodeError"></label>
                         </div>
                         <div class="col">
                             <label for="">Suburb/City</label>
-                            <input type="text">
-                            <label for="" class="error"></label>
+                            <input type="text" id="city">
+                            <label for="" class="error" id="cityError"></label>
                         </div>
                         <div class="col">
                             <label for="">Country</label>
-                            <input type="text">
-                            <label for="" class="error"></label>
+                            <select name="" id="country">
+                                <option value="">select country</option>
+                            </select>
+                            <label for="" class="error" id="countryError"></label>
                         </div>
                         <div class="col">
                             <label for="">State/Province</label>
-                            <input type="text">
-                            <label for="" class="error"></label>
+                            <select name="" id="state">
+                                <option value="">select state</option>
+                            </select>
+                            <label for="" class="error" id="stateError"></label>
                         </div>
                         <div class="col">
                             <label for="">Phone Number</label>
-                            <input type="number">
-                            <label for="" class="error"></label>
+                            <input type="number" id="phoneNum">
+                            <label for="" class="error" id="phoneNumError"></label>
                         </div>
                         <div class="extra">
                             <label for="">Yes, please! I'd like to receive emails from Bliss to learn about <br>
                                 new product launches and upcoming promotions.</label>
-                            <input type="checkbox">Sign-up
-                            <label for="" class="error"></label>
+                            <input type="checkbox" id="acceptTerms">Sign-up
+                            <label for="" class="error" id="acceptTermsError"></label>
                         </div>
                         <div class="proceed-container">
                             <div class="btn">
-                                  <button type="button">CREATE ACCOUNT</button>
+                                  <button type="button" id="createUserAcc">CREATE ACCOUNT</button>
                             </div>
                           
                             <p>By clicking CREATE ACCOUNT, you agree to our <br>
@@ -714,5 +692,6 @@
         <script src="js/jquery.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="js/animation.js"></script>
+        <script src="js/main.js"></script>
 </body>
 </html>
