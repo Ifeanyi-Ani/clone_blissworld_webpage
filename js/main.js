@@ -41,6 +41,7 @@ let bestSellers=$(".bestSellers");
 let cleaners=$(".cleaners");
 let productSampleGrid=$(".product-sample-grid");
 let fullCartView=$(".fullCartView");
+let Ind;
 let productDetails=[];
 let cartItems=[];
 let cleanerM=[];
@@ -297,7 +298,7 @@ function originals(){
               <i class="fa fa-heart" aria-hidden="true"></i>
           </div>
           <div class="content">
-              <h3><a href="#" class="originalIndC" originalInd=${i}>${original[i]["name"]}</a></h3>
+              <h3><a href="#" class="IndC" Ind="${i}">${original[i]["name"]}</a></h3>
               <p>${original[i]["description"]}</p>
           </div>
           <button type="button" class="addtoCart" indx="${i}">ADD TO BAG $${original[i]["price"]}</button>
@@ -339,7 +340,7 @@ function fallFavorite(){
               <i class="fa fa-heart" aria-hidden="true"></i>
           </div>
           <div class="content">
-              <h3><a href="#">${fallfavorite[i]["name"]}</a></h3>
+              <h3><a href="#" class="IndC" Ind="${i}">${fallfavorite[i]["name"]}</a></h3>
               <p>${fallfavorite[i]["description"]}</p>
           </div>
           <button type="button" class="addtoCart" indx="${i}">ADD TO BAG $${fallfavorite[i]["price"]}</button>
@@ -380,7 +381,7 @@ function bestsellers(){
               <i class="fa fa-heart" aria-hidden="true"></i>
           </div>
           <div class="content">
-              <h3><a href="#">${bstsellers[i]["name"]}</a></h3>
+              <h3><a href="#" class="IndC" Ind="${i}">${bstsellers[i]["name"]}</a></h3>
               <p>${bstsellers[i]["description"]}</p>
           </div>
           <button type="button" class="addtoCart" indx="${i}">ADD TO BAG $${bstsellers[i]["price"]}</button>
@@ -421,7 +422,7 @@ function cleanersM(){
               <i class="fa fa-heart" aria-hidden="true"></i>
           </div>
           <div class="content">
-              <h3><a href="#">${cleanerM[i]["name"]}</a></h3>
+              <h3><a href="#" class="IndC" Ind="${i}">${cleanerM[i]["name"]}</a></h3>
               <p>${cleanerM[i]["description"]}</p>
           </div>
           <button type="button" class="addtoCart" indx="${i}">ADD TO BAG $${cleanerM[i]["price"]}</button>
@@ -457,6 +458,7 @@ function addtoCart(){
     }
     displayCart();
 }
+
 function displayCart() {
     let bagStorage= localStorage.getItem("bag")
     if(bagStorage!=null){
@@ -498,7 +500,11 @@ function displayCart() {
     localStorage.setItem("bag", JSON.stringify(cartItems));
     displayCart();
   }
+//  to be continued
+//   function previewPage(){
+//     Ind=$(this).attr("Ind");
 
+// }
 // event Listeners for registering User
 country.on("change", applyDrop);
 createUserAcc.on("click", validateForm);
@@ -515,6 +521,6 @@ $(document).ready(function () {
 // login event Listeners
 btn2.on("click", validateLogin);
 productSampleGrid.on("click",".addtoCart", addtoCart);
+// productSampleGrid.on("click",".IndC", previewPage)
 fullCartView.on("click",".delCart", delCartItem);
-blissOriginals.on("click",".originalIndC", previewOriginal)
 
