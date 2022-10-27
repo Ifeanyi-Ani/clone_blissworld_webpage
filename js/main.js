@@ -41,6 +41,7 @@ let bestSellers=$(".bestSellers");
 let cleaners=$(".cleaners");
 let productSampleGrid=$(".product-sample-grid");
 let fullCartView=$(".fullCartView");
+let homeFallfavorite=$(".homeFallfavorite")
 let Ind;
 let productDetails=[];
 let cartItems=[];
@@ -48,6 +49,7 @@ let cleanerM=[];
 let bstsellers=[];
 let original=[];
 let fallfavorite=[];
+let fallfavorit;
 
 
 
@@ -298,14 +300,13 @@ function originals(){
               <i class="fa fa-heart" aria-hidden="true"></i>
           </div>
           <div class="content">
-              <h3><a href="#" class="IndC" Ind="${i}">${original[i]["name"]}</a></h3>
+              <h3><a href="../productpreview.html?_id=${original[i]._id}" class="IndC" Ind="${i}">${original[i]["name"]}</a></h3>
               <p>${original[i]["description"]}</p>
           </div>
           <button type="button" class="addtoCart" indx="${i}">ADD TO BAG $${original[i]["price"]}</button>
       </div>`
           }
         };
-      
       blissOriginals.html(quickView);
       },
       error:function(error){
@@ -340,7 +341,7 @@ function fallFavorite(){
               <i class="fa fa-heart" aria-hidden="true"></i>
           </div>
           <div class="content">
-              <h3><a href="#" class="IndC" Ind="${i}">${fallfavorite[i]["name"]}</a></h3>
+              <h3><a href="../productpreview.html?_id=${fallfavorite[i]._id}" class="IndC" Ind="${i}">${fallfavorite[i]["name"]}</a></h3>
               <p>${fallfavorite[i]["description"]}</p>
           </div>
           <button type="button" class="addtoCart" indx="${i}">ADD TO BAG $${fallfavorite[i]["price"]}</button>
@@ -349,6 +350,47 @@ function fallFavorite(){
         };
       
       fallFav.html(quickView);
+      },
+      error:function(error){
+        alert(error.statusText)
+      }
+    })
+}
+function homefallFavorite(){
+    homeFallfavorite.html(" <h2>Loading data ..........</h2>")
+    $.ajax({
+      type:"get",
+      url:"http://159.65.21.42:9000/products",
+      success:function(response){
+      fallfavorit=response
+        fallfavorit=fallfavorit.reverse()
+        let quickView="";
+        for (let i=0; (i<fallfavorit.length||i<5); i++){
+          if(fallfavorit[i]["category"]=="Fall Favorite"){
+          quickView+=`<div class="item">
+          <div class="item-img-container">
+              <img src="${fallfavorit[i]["image"]}" alt="">
+              <div class="view">
+                  <a href="#">QUICK VIEW</a>
+              </div>
+          </div>
+          <div class="rate-us">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+          </div>
+          <div class="content">
+              <h3><a href="../productpreview.html?_id=${fallfavorit[i]._id}" class="IndC" Ind="${i}">${fallfavorit[i]["name"]}</a></h3>
+              <p>${fallfavorit[i]["description"]}</p>
+              <button type="button" class="addtoCart" indx="${i}">ADD TO BAG $${fallfavorit[i]["price"]}</button>
+          </div>
+      </div>`
+          }
+        };
+      
+        homeFallfavorite.html(quickView);
       },
       error:function(error){
         alert(error.statusText)
@@ -381,7 +423,7 @@ function bestsellers(){
               <i class="fa fa-heart" aria-hidden="true"></i>
           </div>
           <div class="content">
-              <h3><a href="#" class="IndC" Ind="${i}">${bstsellers[i]["name"]}</a></h3>
+              <h3><a href="../productpreview.html?_id=${bstsellers[i]._id}" class="IndC" Ind="${i}">${bstsellers[i]["name"]}</a></h3>
               <p>${bstsellers[i]["description"]}</p>
           </div>
           <button type="button" class="addtoCart" indx="${i}">ADD TO BAG $${bstsellers[i]["price"]}</button>
@@ -422,7 +464,7 @@ function cleanersM(){
               <i class="fa fa-heart" aria-hidden="true"></i>
           </div>
           <div class="content">
-              <h3><a href="#" class="IndC" Ind="${i}">${cleanerM[i]["name"]}</a></h3>
+              <h3><a href="../productpreview.html?_id=${cleanerM[i]._id}" class="IndC" Ind="${i}">${cleanerM[i]["name"]}</a></h3>
               <p>${cleanerM[i]["description"]}</p>
           </div>
           <button type="button" class="addtoCart" indx="${i}">ADD TO BAG $${cleanerM[i]["price"]}</button>
@@ -457,6 +499,9 @@ function addtoCart(){
     localStorage.setItem("bag", JSON.stringify(cartItems));
     }
     displayCart();
+}
+function homeaddtoCart(){
+    let i =$(this).attr("indx");
 }
 
 function displayCart() {
@@ -495,16 +540,112 @@ function displayCart() {
 
   function delCartItem(){
     let i=$(this).attr("idx");
-    console.log(cartItems[i])
     cartItems.splice(i,1);
     localStorage.setItem("bag", JSON.stringify(cartItems));
     displayCart();
   }
-//  to be continued
-//   function previewPage(){
-//     Ind=$(this).attr("Ind");
 
-// }
+  function previewPage(){
+   let siteUrl=window.location.search;
+   let siteUrlParam= new URLSearchParams(siteUrl);
+   let id=siteUrlParam.get("_id");
+   let display;
+   $("#produc").html("Loading View");
+   $.ajax({
+    url: "http://159.65.21.42:9000/product/" + id,
+    method: "GET",
+    success: function (data) {
+  
+      display = `
+      <div class="inner">
+
+      <div class="img-col">
+          <div class="container">
+              <div class="bg-img"><img src=${data.image} alt=""></div>
+              <div class="changing-img">
+                  <div><a href="#"><img src=${data.image} alt=""></a></div>
+                  <div><a href="#"><img src=${data.image} alt=""></a></div>
+                  <div><a href="#"><img src=${data.image} alt=""></a></div>
+                  <div><a href="#"><img src=${data.image} alt=""></a></div>
+                  <div><a href="#"><img src=${data.image} alt=""></a></div>
+              </div>
+          </div>
+      </div>
+
+      <div class="content-col">
+          <span>Save 30% with code ZEST30</span>
+          <h3>${data.name}</h3>
+          <h5>${data.description}</h5>
+          <div class="rate-us">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+          </div>
+          <p><a href="#">Read 366 Reviews</a> | <a href="#">1108
+              Buyer Comments</a> or <a href="#"
+              class="rm-underline">Write a Review</a> </p>
+          <ul>
+              <span>A cult-favorite bestselling formula, this
+                  rich,
+                  quick-absorbing lemon sage moisturizer leaves
+                  even
+                  the <br> most parched skin smooth, supple and
+                  supremely soft – never greasy.</span>
+              <li>Used for decades in our spas</li>
+              <li>Mega moisturizers shea butter and coconut oil
+                  soothe, condition and deeply nourish</li>
+          </ul>
+          <a href="#">Read More</a>
+          <p class="unset"><span class="bolder">Skin Type(s):</span> All Skin
+              Types</p>
+          <p class="unset"><span class="bolder">Scent:</span> Lemon & Sage</p>
+          <p class="inline">or 4 interest-free payments of $3.00 with <span
+                  class="flex-container"><span class="img-col"><a
+                          href="#"><img
+                              src="img/cartview/afterpay.png"
+                              alt=""></a></span>
+                  <span class="icon"><a href="#"><i class="fa
+                              fa-info-circle" aria-hidden="true"></i></a></span></span></p>
+          <div class="flex-qty">
+              <div class="size">
+                  <p>Size:</p>
+                  <select name="" id="">
+                      <option value="">Choose size:</option>
+                      <option value="small">6.7 oz</option>
+                      <option value="big">32 oz</option>
+                  </select>
+              </div>
+              <div class="qty">
+                  <p>Quantity</p>
+                  <div class="box">
+                      <button><i class="fa fa-minus"
+                              aria-hidden="true"></i>
+                      </button>
+                      <input type="number">
+                      <button><i class="fa fa-plus"
+                              aria-hidden="true"></i></button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="btn-con"><button type="button">ADD TO BAG $22</button></div>
+          
+          <p class="p-space"><a href="#">Find me in store</a>at Target, Ulta, CVS and Walgreens</p>
+      </div>
+  </div>
+      `;
+      console.log(display);
+      $("#produc").html(display);
+    },
+    error: function (err) {
+      console.log(err);
+    },
+  });
+
+
+}
 // event Listeners for registering User
 country.on("change", applyDrop);
 createUserAcc.on("click", validateForm);
@@ -517,10 +658,14 @@ $(document).ready(function () {
     bestsellers();
     cleanersM();
     displayCart();
+    homefallFavorite();
+    previewPage();
+
 });
+
 // login event Listeners
 btn2.on("click", validateLogin);
 productSampleGrid.on("click",".addtoCart", addtoCart);
-// productSampleGrid.on("click",".IndC", previewPage)
 fullCartView.on("click",".delCart", delCartItem);
+homeFallfavorite.on("click",".addtoCart", homeaddtoCart)
 
